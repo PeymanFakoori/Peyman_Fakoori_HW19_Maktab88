@@ -8,8 +8,9 @@ class Car {
   }
 }
 const cars: Car[] = [];
+let numberOfCars: number;
 
-function randomOrder(inputCarCount: number) {
+function randomOrder(inputCarCount: number): number[] {
   let randomNumbers: number[] = [];
   while (randomNumbers.length < inputCarCount) {
     let randOrder = Math.floor(Math.random() * inputCarCount) + 1;
@@ -19,4 +20,12 @@ function randomOrder(inputCarCount: number) {
   }
 
   return randomNumbers;
+}
+
+function stepArray(Max: number, inputCount: number): number[] {
+  let stepOrder: number[] = [];
+  while (stepOrder.length < inputCount) {
+    stepOrder.push(Math.random() * Max + 1);
+  }
+  return stepOrder;
 }
