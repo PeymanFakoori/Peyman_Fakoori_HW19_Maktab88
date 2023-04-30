@@ -3,10 +3,10 @@ class Car {
   name: string;
   position: number;
   placment: number;
-  constructor(name: string, position: number) {
+  constructor(name: string, position: number, placment: number) {
     this.name = name;
     this.position = position;
-    this.placment = this.placment;
+    this.placment = placment;
   }
 }
 // let numberOfCars: number;
@@ -15,9 +15,9 @@ let numberOfCars: string | null = prompt("please enter number of cars");
 function randomOrder(inputCarCount: number): number[] {
   let randomNumbers: number[] = [];
   while (randomNumbers.length < inputCarCount) {
-    let randOrder = Math.floor(Math.random() * inputCarCount) + 1;
-    if (!randomNumbers.includes(randOrder)) {
-      randomNumbers.push(randOrder);
+    let position = Math.floor(Math.random() * inputCarCount) + 1;
+    if (!randomNumbers.includes(position)) {
+      randomNumbers.push(position);
     }
   }
 
